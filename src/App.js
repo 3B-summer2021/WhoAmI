@@ -5,10 +5,10 @@ import Question from "./container/Question";
 import Ending from "./container/Ending";
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Route path="/" component={Home} exact />
-      <Route path="/question/:id" component={Question} />
-      <Route path="/ending" component={Ending} />
+    <BrowserRouter>
+      <Route path="/WhoAmI/" component={Home} exact />
+      <Route path="/WhoAmI/question/:id" component={Question} />
+      <Route path="/WhoAmI/ending" component={Ending} />
     </BrowserRouter>
   );
 }
