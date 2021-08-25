@@ -7,9 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/question/:id" exact component={Question} />
-        <Route path="/ending" exact component={Ending} />
+        <Route path="/WhoAmI/" exact component={Home} />
+        <Route path="/WhoAmI/question/:id" exact component={Question} />
+        <Route path="/WhoAmI/ending" exact component={Ending} />
         <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
