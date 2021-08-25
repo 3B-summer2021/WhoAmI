@@ -1,7 +1,7 @@
 import React from "react";
 
-function Question() {
-  return <div>Question</div>;
+function Qeustion({ match }) {
+  return <div>Qeustion {match.params.id}</div>;
 }
 
-export default Question;
+export default Qeustion;
