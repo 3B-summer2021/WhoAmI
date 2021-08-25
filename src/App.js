@@ -7,9 +7,9 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route path="/" render={() => <Home />} exact />
-        <Route path="/question/:id" render={() => <Question />} />
-        <Route path="/ending" render={() => <Ending />} />
+        <Route path="/" exact render={() => <Home />} />
+        <Route path="/question/:id" exact render={() => <Question />} />
+        <Route path="/ending" exact render={() => <Ending />} />
       </Switch>
     </BrowserRouter>
   );
