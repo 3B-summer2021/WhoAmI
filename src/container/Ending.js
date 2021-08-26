@@ -1,6 +1,6 @@
 import React from "react";
 
-function Ending() {
+function Ending({ answer }) {
   return <div>Ending</div>;
 }
 
