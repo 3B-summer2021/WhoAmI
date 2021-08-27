@@ -9,6 +9,7 @@ import {
 // https://www.npmjs.com/package/react-share
 // kakaotalk: https://cheonmro.github.io/2019/04/17/kakao-share/
 // https://i5i5.tistory.com/345
+// https://actumn.tistory.com/13
 
 function Sharing(props) {
   return (
