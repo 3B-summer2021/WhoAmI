@@ -7,7 +7,7 @@ import Ending from "./container/Ending";
 function App() {
   const [answer, setAnswer] = React.useState([]);
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route
