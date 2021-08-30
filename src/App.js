@@ -5,16 +5,11 @@ import Home from "./container/Home";
 import Question from "./container/Question";
 import Ending from "./container/Ending";
 function App() {
-  const [answer, setAnswer] = React.useState([]);
-
   return (
     <HashRouter>
       <Switch>
         <Route path="/" component={Home} exact />
-        <Route
-          path="/question/:id"
-          render={() => <Question answer={answer} setAnswer={setAnswer} />}
-        />
+        <Route path="/question/:id" render={() => <Question />} />
         <Route path="/ending/:type" render={() => <Ending />} />
       </Switch>
     </HashRouter>
