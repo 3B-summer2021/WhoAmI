@@ -15,7 +15,7 @@ function App() {
           path="/question/:id"
           render={() => <Question answer={answer} setAnswer={setAnswer} />}
         />
-        <Route path="/ending" render={() => <Ending answer={answer} />} />
+        <Route path="/ending/:type" render={() => <Ending />} />
       </Switch>
     </HashRouter>
   );

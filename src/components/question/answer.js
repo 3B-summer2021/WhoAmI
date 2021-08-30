@@ -9,7 +9,7 @@ function Answer({ answer, setAnswer, id }) {
       setAnswer(answer.concat("hi"));
       history.push("/question/" + len);
     } else {
-      history.push("/ending");
+      history.push("/ending/shy");
     }
   };
   // console.log(id);
