@@ -5,8 +5,8 @@ function Name(props) {
   const name = props.type;
   return (
     <Box display="flex" flexDirection="column">
-      <Typography variant="h2">{description[name][0]}</Typography>
-      <Typography variant="body1">{description[name][1]}</Typography>
+      <h2>{description[name][0]}</h2>
+      <Box>{description[name][1]}</Box>
     </Box>
   );
 }
