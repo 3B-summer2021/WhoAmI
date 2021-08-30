@@ -17,6 +17,8 @@ import KakaoShare from "./kakaoshare";
 
 function Sharing(props) {
   const url = window.location.href;
+  console.log(url);
+  const path = window.location.pathname + window.location.hash;
   const size = 36;
   return (
     <Box display="flex" alignItems="center">
@@ -26,7 +28,7 @@ function Sharing(props) {
       <TwitterShareButton url={url}>
         <TwitterIcon size={size} />
       </TwitterShareButton>
-      <KakaoShare url={url} size={size} />
+      <KakaoShare url={path} size={size} />
       <CopyToClipboard text={url}>
         <ButtonBase height={size}>
           <Icon icon="akar-icons:link-chain" width={size} />
