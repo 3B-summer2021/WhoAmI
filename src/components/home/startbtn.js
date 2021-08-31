@@ -12,7 +12,11 @@ function StartBtn(props) {
     }
   }
   return (
-    <Button variant="contained" onClick={() => goto(props.sentence)}>
+    <Button
+      variant="contained"
+      onClick={() => goto(props.sentence)}
+      fullWidth={true}
+    >
       {props.sentence}
     </Button>
   );

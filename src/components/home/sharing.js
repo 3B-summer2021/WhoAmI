@@ -17,11 +17,11 @@ import KakaoShare from "./kakaoshare";
 
 function Sharing(props) {
   const url = window.location.href;
-  console.log(url);
+  // console.log(url);
   const path = window.location.pathname + window.location.hash;
   const size = 36;
   return (
-    <Box display="flex" alignItems="center">
+    <Box display="flex" alignItems="center" m={2}>
       <FacebookShareButton url={url} hashtag="#내가수능과목이라면">
         <FacebookIcon size={size} />
       </FacebookShareButton>
