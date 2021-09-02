@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 function Title(props) {
   const classes = useStyles();
   return (
-    <Box display="flex" flexDirection="row" alignItems="center" mb={2}>
+    <Box display="flex" flexDirection="row" alignItems="center">
       <Avatar
         alt="cucumber institute"
         src={process.env.PUBLIC_URL + "/image/d1.jpg"}
