@@ -1,6 +1,21 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { a_list_1, a_list_2 } from "../../data/answer_list";
+import Button from '@material-ui/core/Button';
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+  Typography: {
+    fontFamily: [
+      '"IBM Plex Sans KR"',
+    ]
+  }
+}));
+
 const checkType = (answer) => {
   var name = "";
   var ie = 1;
@@ -53,6 +68,7 @@ const checkType = (answer) => {
   return name;
 };
 function Answer({ answer, setAnswer, id }) {
+  const classes = useStyles();
   const history = useHistory();
   useEffect(() => {
     if (answer.length != 8) {
@@ -77,12 +93,12 @@ function Answer({ answer, setAnswer, id }) {
 
   return (
     <div>
-      <button onClick={() => setAnswer(answer.concat(0))}>
+      <Button variant="contained" color="primary" className={classes.margin} className={classes.Typography} width="100%" onClick={() => setAnswer(answer.concat(0))}>
         {a_list_1[id - 1]}
-      </button>
-      <button onClick={() => setAnswer(answer.concat(1))}>
+      </Button>
+      <Button variant="contained" color="secondary" className={classes.margin} className={classes.Typography} width="100%" onClick={() => setAnswer(answer.concat(1))}>
         {a_list_2[id - 1]}
-      </button>
+      </Button>
     </div>
   );
 }
