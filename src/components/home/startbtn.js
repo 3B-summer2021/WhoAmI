@@ -16,6 +16,7 @@ function StartBtn(props) {
       variant="contained"
       onClick={() => goto(props.sentence)}
       fullWidth={true}
+      style={{fontFamily: "inherit"}}
     >
       {props.sentence}
     </Button>

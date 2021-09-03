@@ -4,16 +4,13 @@ import { a_list_1, a_list_2 } from "../../data/answer_list";
 import Button from '@material-ui/core/Button';
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   margin: {
     margin: theme.spacing(1),
+    fontFamily: 'inherit'
   },
-  Typography: {
-    fontFamily: [
-      '"IBM Plex Sans KR"',
-    ]
-  }
 }));
 
 const checkType = (answer) => {
@@ -92,14 +89,26 @@ function Answer({ answer, setAnswer, id }) {
   // };
 
   return (
-    <div>
-      <Button variant="contained" color="primary" className={classes.margin} className={classes.Typography} width="100%" onClick={() => setAnswer(answer.concat(0))}>
-        {a_list_1[id - 1]}
+    <Box>
+      <Button 
+       variant="contained" 
+       color="primary" 
+       className={classes.margin} 
+       //className={classes.Typography} 
+       fullWidth={true} 
+       onClick={() => setAnswer(answer.concat(0))}>
+      {a_list_1[id - 1]}
       </Button>
-      <Button variant="contained" color="secondary" className={classes.margin} className={classes.Typography} width="100%" onClick={() => setAnswer(answer.concat(1))}>
-        {a_list_2[id - 1]}
+      <Button 
+       variant="contained"
+       color="secondary"
+       className={classes.margin}
+       //className={classes.Typography}
+       fullWidth={true}
+       onClick={() => setAnswer(answer.concat(1))}>
+      {a_list_2[id - 1]}
       </Button>
-    </div>
+    </Box>
   );
 }
 
