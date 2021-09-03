@@ -5,25 +5,30 @@ import Title from "../components/common/title";
 import { Box } from "@material-ui/core";
 function Home() {
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
+    <Box display="flex" flexDirection="column" alignItems="center" width="100%">
       <Box
         maxWidth="600px"
         display="flex"
         flexDirection="column"
         alignItems="center"
-        m={2}
+        width="90%"
       >
-        <Title size={20} />
-        <Box mb={2}>
+        <Box my={2}>
+          <Title size={20} />
+        </Box>
+        <Box my={2}>
           <img
             src={process.env.PUBLIC_URL + "/image/d1.jpg"}
-            width="544px"
-            height="396px"
+            width="100%"
+            alt="main"
           />
         </Box>
-
-        <StartBtn sentence="START" />
-        <Sharing />
+        <Box my={2} width="100%">
+          <StartBtn sentence="START" />
+        </Box>
+        <Box my={2} width="100%">
+          <Sharing />
+        </Box>
       </Box>
     </Box>
   );
