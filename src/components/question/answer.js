@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { a_list_1, a_list_2 } from "../../data/answer_list";
 import { Box, Button } from "@material-ui/core";
-
 const checkType = (answer) => {
   var name = "";
   var ie = 1;
@@ -54,10 +53,11 @@ const checkType = (answer) => {
   }
   return name;
 };
-function Answer({ answer, setAnswer, id }) {
+function Answer({ answer, setAnswer, id, btnHeight }) {
   const history = useHistory();
+
   useEffect(() => {
-    if (answer.length != 8) {
+    if (answer.length !== 8) {
       const len = answer.length + 1;
       history.push("/question/" + len);
     } else {
@@ -87,8 +87,8 @@ function Answer({ answer, setAnswer, id }) {
           onClick={() => setAnswer(answer.concat(0))}
           style={{
             fontFamily: "inherit",
-            minHeight: "200px",
-            maxHeight: "200px",
+            minHeight: btnHeight,
+            maxHeight: btnHeight,
           }}
         >
           {a_list_1[id - 1]}
@@ -102,8 +102,8 @@ function Answer({ answer, setAnswer, id }) {
           onClick={() => setAnswer(answer.concat(1))}
           style={{
             fontFamily: "inherit",
-            minHeight: "200px",
-            maxHeight: "200px",
+            minHeight: btnHeight,
+            maxHeight: btnHeight,
           }}
         >
           {a_list_2[id - 1]}
