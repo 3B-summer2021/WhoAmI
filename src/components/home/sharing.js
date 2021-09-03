@@ -25,7 +25,7 @@ function Sharing(props) {
         path: path,
       },
     });
-  }, []);
+  }, [path]);
   return (
     <Box display="flex" alignItems="center" width="100%">
       <FacebookShareButton
