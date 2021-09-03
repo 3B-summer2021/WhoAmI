@@ -13,6 +13,7 @@ function Sharing(props) {
   const url = window.location.href;
   // console.log(url);
   const path = window.location.pathname + window.location.hash;
+  // console.log(path);
   const size = "30";
   React.useEffect(() => {
     if (!window.Kakao.isInitialized()) {

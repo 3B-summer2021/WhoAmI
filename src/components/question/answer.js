@@ -1,17 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { a_list_1, a_list_2 } from "../../data/answer_list";
-import Button from '@material-ui/core/Button';
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
-import { Box } from "@material-ui/core";
-
-const useStyles = makeStyles(theme => ({
-  margin: {
-    margin: theme.spacing(1),
-    fontFamily: 'inherit'
-  },
-}));
+import { Box, Button } from "@material-ui/core";
 
 const checkType = (answer) => {
   var name = "";
@@ -65,7 +55,6 @@ const checkType = (answer) => {
   return name;
 };
 function Answer({ answer, setAnswer, id }) {
-  const classes = useStyles();
   const history = useHistory();
   useEffect(() => {
     if (answer.length != 8) {
@@ -89,25 +78,37 @@ function Answer({ answer, setAnswer, id }) {
   // };
 
   return (
-    <Box>
-      <Button 
-       variant="contained" 
-       color="primary" 
-       className={classes.margin} 
-       //className={classes.Typography} 
-       fullWidth={true} 
-       onClick={() => setAnswer(answer.concat(0))}>
-      {a_list_1[id - 1]}
-      </Button>
-      <Button 
-       variant="contained"
-       color="secondary"
-       className={classes.margin}
-       //className={classes.Typography}
-       fullWidth={true}
-       onClick={() => setAnswer(answer.concat(1))}>
-      {a_list_2[id - 1]}
-      </Button>
+    <Box width="100%" display="flex" flexDirection="column" alignItems="center">
+      <Box my={2} width="100%">
+        <Button
+          variant="contained"
+          color="primary"
+          fullWidth={true}
+          onClick={() => setAnswer(answer.concat(0))}
+          style={{
+            fontFamily: "inherit",
+            minHeight: "200px",
+            maxHeight: "200px",
+          }}
+        >
+          {a_list_1[id - 1]}
+        </Button>
+      </Box>
+      <Box my={2} width="100%">
+        <Button
+          variant="contained"
+          color="secondary"
+          fullWidth={true}
+          onClick={() => setAnswer(answer.concat(1))}
+          style={{
+            fontFamily: "inherit",
+            minHeight: "200px",
+            maxHeight: "200px",
+          }}
+        >
+          {a_list_2[id - 1]}
+        </Button>
+      </Box>
     </Box>
   );
 }

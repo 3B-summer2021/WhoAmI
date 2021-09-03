@@ -17,8 +17,13 @@ function Question(props) {
         alignItems="center"
         width="90%"
       >
-        <Box my={2} textAlign="center" style={{wordWrap
-        : "break-word"}}>
+        <Box
+          my={2}
+          width="100%"
+          textAlign="center"
+          style={{ wordWrap: "break-word" }}
+          minHeight="50px"
+        >
           Question {id} {q_list[id - 1]}
         </Box>
         <Box my={2} width="100%">
