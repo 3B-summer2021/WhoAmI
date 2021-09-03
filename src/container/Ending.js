@@ -20,7 +20,7 @@ function Ending() {
           <img
             src={process.env.PUBLIC_URL + "/image/d1.jpg"}
             width="100%"
-            alt="main"
+            alt="ending"
           />
         </Box>
         <Box my={2}>
