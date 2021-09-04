@@ -22,7 +22,7 @@ function Title(props) {
         className={props.size >= 20 ? classes.large : classes.small}
       />
       <Box ml={2} fontSize={props.size}>
-        내가 과목이라면?
+        내가 수능 과목이라면?
       </Box>
     </Box>
   );

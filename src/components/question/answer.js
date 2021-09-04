@@ -82,7 +82,7 @@ function Answer({ answer, setAnswer, id, btnHeight }) {
       <Box my={2} width="100%">
         <Button
           variant="contained"
-          color="primary"
+          color="#333333"
           fullWidth={true}
           onClick={() => setAnswer(answer.concat(0))}
           style={{
