@@ -99,8 +99,8 @@ function Answer({ answer, setAnswer, id, btnHeight, type }) {
             fontWeight: "bold",
             minHeight: btnHeight,
             maxHeight: btnHeight,
-            backgroundColor: "#e1eef6",
-            border: "3px solid #5A93B5",
+            backgroundColor: "#73BA4D",
+            // border: "3px solid #5A93B5",
           }}
         >
           {type === 1 ? a1_list_1[id - 1] : a2_list_1[id - 1]}
@@ -119,8 +119,8 @@ function Answer({ answer, setAnswer, id, btnHeight, type }) {
 
             minHeight: btnHeight,
             maxHeight: btnHeight,
-            backgroundColor: "#e1eef6",
-            border: "3px solid #5A93B5",
+            backgroundColor: "#73BA4D",
+            // border: "3px solid #5A93B5",
           }}
         >
           {type === 1 ? a1_list_2[id - 1] : a2_list_2[id - 1]}

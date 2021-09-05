@@ -59,6 +59,8 @@ function Question(props) {
           style={{
             wordWrap: "break-word",
             fontSize: "20px",
+            color: "#143A00",
+            fontWeight: 600,
           }}
           minHeight="70px"
         >
