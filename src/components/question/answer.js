@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { a_list_1, a_list_2 } from "../../data/answer_list";
+import {
+  a1_list_1,
+  a1_list_2,
+  a2_list_1,
+  a2_list_2,
+} from "../../data/answer_list";
 import { Box, Button } from "@material-ui/core";
 const checkType = (answer) => {
   var name = "";
@@ -53,13 +58,17 @@ const checkType = (answer) => {
   }
   return name;
 };
-function Answer({ answer, setAnswer, id, btnHeight }) {
+function Answer({ answer, setAnswer, id, btnHeight, type }) {
   const history = useHistory();
 
   useEffect(() => {
     if (answer.length !== 8) {
       const len = answer.length + 1;
-      history.push("/question/" + len);
+      if (type === 1) {
+        history.push("/question/study/" + len);
+      } else {
+        history.push("/question/play/" + len);
+      }
     } else {
       const name = checkType(answer);
       history.push("/ending/" + name);
@@ -82,31 +91,39 @@ function Answer({ answer, setAnswer, id, btnHeight }) {
       <Box my={2} width="100%">
         <Button
           variant="contained"
-          color="primary"
           fullWidth={true}
           onClick={() => setAnswer(answer.concat(0))}
           style={{
             fontFamily: "inherit",
+            fontSize: "14px",
+            fontWeight: "bold",
             minHeight: btnHeight,
             maxHeight: btnHeight,
+            backgroundColor: "#e1eef6",
+            border: "3px solid #5A93B5",
           }}
         >
-          {a_list_1[id - 1]}
+          {type === 1 ? a1_list_1[id - 1] : a2_list_1[id - 1]}
         </Button>
       </Box>
       <Box my={2} width="100%">
         <Button
           variant="contained"
-          color="secondary"
+          backgroundColor="#FDBF44"
           fullWidth={true}
           onClick={() => setAnswer(answer.concat(1))}
           style={{
             fontFamily: "inherit",
+            fontSize: "14px",
+            fontWeight: "bold",
+
             minHeight: btnHeight,
             maxHeight: btnHeight,
+            backgroundColor: "#e1eef6",
+            border: "3px solid #5A93B5",
           }}
         >
-          {a_list_2[id - 1]}
+          {type === 1 ? a1_list_2[id - 1] : a2_list_2[id - 1]}
         </Button>
       </Box>
     </Box>
