@@ -12,8 +12,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 function Sharing(props) {
   const url = window.location.href;
   // console.log(url);
-  const path = window.location.pathname + window.location.hash;
-  // console.log(path);
+  const path = (window.location.pathname + window.location.hash).substring(1);
+  console.log(path);
   const size = "30";
   React.useEffect(() => {
     if (!window.Kakao.isInitialized()) {
@@ -28,7 +28,7 @@ function Sharing(props) {
     });
   }, [path]);
   return (
-    <Box display="flex" alignItems="center" width="100%">
+    <Box display="flex" alignItems="center" width="100%" my={2}>
       <FacebookShareButton
         url={url}
         hashtag="#내가수능과목이라면"

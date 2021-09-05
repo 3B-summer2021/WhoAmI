@@ -5,6 +5,7 @@ body {
   font-family: "IBM Plex Sans KR", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #effbd7;
 }
 
 code {
