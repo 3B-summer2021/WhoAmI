@@ -18,8 +18,8 @@ const checkType = (answer) => {
     ie = 0;
   }
   if (
-    (answer[4] === 1 && answer[5] === 0) ||
-    (answer[4] === 1 && answer[6] === 1) ||
+    (answer[3] === 1 && answer[5] === 0) ||
+    (answer[3] === 1 && answer[6] === 1) ||
     (answer[5] === 0 && answer[6] === 1)
   ) {
     // n
