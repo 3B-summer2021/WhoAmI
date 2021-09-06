@@ -6,7 +6,6 @@ function StartBtn(props) {
   const history = useHistory();
   function goto(sentence) {
     if (sentence === "RESTART") {
-      props.setType(0);
       history.push("/");
     } else {
       history.push("/question/1");
