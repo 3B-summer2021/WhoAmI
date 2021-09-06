@@ -35,7 +35,7 @@ function Home({ setType }) {
         </Box>
         <Box my={2}>
           <img
-            src={process.env.PUBLIC_URL + "/image/d1.jpg"}
+            src={process.env.PUBLIC_URL + "/image/main_theme.png"}
             width="100%"
             alt="main"
           />

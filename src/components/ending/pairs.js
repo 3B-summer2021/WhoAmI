@@ -15,28 +15,36 @@ function Pairs({ type }) {
     <Box display="flex" flexDirection="row" alignItems="center" width="100%">
       <Box mr={2} flex={1}>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Box my={1}>찾았다... 마이 데.스.티.니.♥</Box>
-          <Box my={1}>
+          <Box my={0.5} textAlign="center">
+            찾았다...
+            <br />
+            마이 데.스.티.니.♥
+          </Box>
+          <Box my={0.5}>
             <img
               src={process.env.PUBLIC_URL + "/image/d1.jpg"}
               width="100%"
               alt={pair[0]}
             />
           </Box>
-          <Box my={1}> {pair[0]}</Box>
+          <Box my={0.5}> {pair[0]}</Box>
         </Box>
       </Box>
       <Box flex={1}>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Box my={1}>이번 생엔... 운명이 아닌가봐요...★</Box>
-          <Box my={1}>
+          <Box my={0.5} textAlign="center">
+            이번 생엔...
+            <br />
+            운명이 아닌가봐요...★
+          </Box>
+          <Box my={0.5}>
             <img
               src={process.env.PUBLIC_URL + "/image/d1.jpg"}
               width="100%"
               alt={pair[1]}
             />
           </Box>
-          <Box my={1}> {pair[1]}</Box>
+          <Box my={0.5}> {pair[1]}</Box>
         </Box>
       </Box>
     </Box>
