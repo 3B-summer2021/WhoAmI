@@ -8,7 +8,7 @@ import { Box } from "@material-ui/core";
 import Pairs from "../components/ending/pairs";
 import useWindowDimensions from "../utils/useWindow";
 
-function Ending() {
+function Ending({ setType }) {
   const type = useParams().type;
   // console.log(type);
   const { height } = useWindowDimensions();
@@ -52,7 +52,7 @@ function Ending() {
           <Pairs type={type} />
         </Box>
         <Box my={2} width="100%">
-          <StartBtn sentence="RESTART" />
+          <StartBtn sentence="RESTART" setType={setType} />
         </Box>
         <Box
           width="100%"

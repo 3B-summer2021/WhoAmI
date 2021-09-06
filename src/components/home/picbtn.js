@@ -1,15 +1,12 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { ButtonBase, Box } from "@material-ui/core";
-function PicBtn({ sentence, type, setType }) {
-  const history = useHistory();
+
+function PicBtn({ sentence, val, setType }) {
   function goto() {
-    if (type === 1) {
+    if (val === 1) {
       setType(1);
-      history.push("/question/study/1");
     } else {
       setType(2);
-      history.push("/question/play/1");
     }
   }
   return (
