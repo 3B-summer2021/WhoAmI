@@ -56,6 +56,7 @@ function Home({ type, setType }) {
               src={process.env.PUBLIC_URL + "/image/video" + type + ".mp4"}
               width="100%"
               autoPlay="true"
+              poster={process.env.PUBLIC_URL + "/image/main_theme.png"}
               onEnded={() => goto()}
             />
           )}
